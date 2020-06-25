@@ -1,3 +1,5 @@
+// Created by Igor Makarsky
+
 const QUIZ_CATEGORIES = [
   {category: 'js', title: 'JavaScript'},
   {category: 'java', title: 'Java'},
@@ -501,7 +503,7 @@ class Timer {
 
 class QuizService {
   loadQuizzes(quizName) {
-    return fetch(`quizzes/${quizName}.json`)
+    return fetch(`https://raw.githubusercontent.com/makarsky/quiz-app/master/quizzes/${quizName}.json`)
       .then((result) => result.json())
       .then((quizzes) => quizzes.filter(q => SUPPORTED_QUIZ_TYPES.includes(q.type)))
       .then((quizzes) => {
@@ -756,8 +758,8 @@ function eventListeners() {
 
   document.getElementById('quiz-categories').innerHTML = quizCategories.join('');
 
-  const ui = new UI;
-  const game = new Game;
+  const ui = new UI();
+  const game = new Game();
   const quizService = new QuizService();
   const controller = new Controller(ui, game, quizService);
 
@@ -786,8 +788,8 @@ function eventListeners() {
   });
 
   controller.loadQuizzesByType(
-    QUIZ_CATEGORIES[0].category,
-    QUIZ_CATEGORIES[0].title
+    QUIZ_CATEGORIES[4].category,
+    QUIZ_CATEGORIES[4].title
   );
 }
 
