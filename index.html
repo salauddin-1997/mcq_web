@@ -1,137 +1,582 @@
+<!-- Created by Mark Benjamin -->
+
+<!--By Mark Benjamin ... Sololearn -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.2/css/swiper.min.css"
-    integrity="sha256-ifcIIxgLk3qxkzqWDtHuFnc5soeWWREpen87keBV2Bc=" crossorigin="anonymous" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.2/js/swiper.min.js"
-    integrity="sha256-77+0bckeKQsq6PCikMAouwyAzAMgygDz+HCWQfyxu4A=" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/style.css">
+   
+    
+  
+    <title>Quiz App</title>
+    </head>
+    <!--By Mark Benjamin ... Sololearn -->
 
-    <link rel="stylesheet" href="style.css">
-  <title>Quiz App</title>
-</head>
+    <body onload="all()">
+      
+      
+      <h2>উপ-সহকারী কৃষি কর্মকর্তা নিয়োগ সাজেশন MCQ প্রশ্ন ও উত্তর</h2>
+        
+        <!--  Initializer      -->
+        <div id="initializer">
+            <p>In this section, you will be required to answer a few questions. Put the right answer choice in the input provided. At the end, you will be told how you performed!</p>
+            <button onclick="first()" id="start">Get Started</button>
+        </div>
+        
+      
+     
+        <!--  Question one     -->
+       <div class="quiz">
+       <p>বাংলাদেশে কয়টি সরকারি বিশ্ববিদ্যালয় রয়েছে?</p>
+           <ul>
+               <li>A: ১৪টি</li>
+               <li>B: ৪০টি</li>
+               <li>C: ২৪টি</li>
+               <li>D: ৫২টি</li>
+           </ul>
+           <input id="quiz1" type="text">
+           <br/><br/>
+           <button onclick="second()">Next Quiz</button>
+        </div>
+        
 
-<body>
-  <div class="main-container">
-    <div class="main-container__header">
-      <div class="interactive-container">
-        <!-- Menu Icon -->
-        <div id="menuButton" class="menu-container">
-          <div class="menu-container__bar"></div>
-          <div class="menu-container__bar"></div>
-          <div class="menu-container__bar"></div>
+        <!--  Question two     -->
+       <div class="quiz">
+       <p>পরিবেশ দূষনের প্রধান কারণ কোনটি?</p>
+           <ul>
+               <li>A: বৃক্ষ নিধন</li>
+               <li>B: মাটি ক্ষয়</li>
+               <li>C: প্রাকৃতিক সার ব্যবহার</li>
+               <li>D: জনসংখ্যা বৃদ্ধি</li>
+             <li>E: কোনটিই নয়</li>
+           </ul>
+           <input id="quiz2" type="text">
+           <br/><br/>
+           <button onclick="third()">Next Quiz</button>
         </div>
 
-        <!-- Quiz Indicators -->
-        <div>
-          <div id="quiz-indicators" class="indicators">
-            <span class="indicator"></span><span class="indicator"></span><span class="indicator"></span><span
-              class="indicator"></span><span class="indicator"></span>
-          </div>
 
-          <div class="indicators swiper-custom-pagination swiper-pagination-bullets hidden">
-          </div>
+        
+        <!--  Question three     -->
+       <div class="quiz">
+       <p>সুনামির কারন কি?</p>
+           <ul>
+               <li>A: আগ্নেগিরির অগ্যুৎপাত</li>
+               <li>B: ঘুর্নিঝড়-</li>
+               <li>C: সমুদ্র তলদেশে ভূমিকম্প</li>
+               <li>D: চন্দ্র ও সূর্যের আকর্ষন</li>
+           </ul>
+           <input id="quiz3" type="text">
+           <br/><br/>
+           <button onclick="fourth()">Next Quiz</button>
         </div>
+        
 
-        <div class="menu-container menu-container--fake"></div>
+
+          <!--  Question four    -->
+       <div class="quiz">
+       <p> নৈতিক মূল্যবোধ শিক্ষার প্রাথমিক মাধ্যম কোনটি?</p>
+           <ul>
+               <li>A: পরিবার</li>
+               <li>B: বাবা</li>
+               <li>C: স্কুল শিক্ষক</li>
+               <li>D: সমাজ</li>
+           </ul>
+           <input id="quiz4" type="text">
+           <br/><br/>
+           <button  onclick="fifth()">Next Quiz</button>
       </div>
 
-      <!-- Progress bar -->
-      <div class="timer-container">
-        <div id="timeBar" class="timer-container__timer invisible"></div>
+      
+      
+         <!--  Question five     -->
+       <div class="quiz">
+       <p>বৃক্ষ শব্দের সমার্থক শব্দ কোনটি?</p>
+           <ul>
+               <li>A: কলাপী</li>
+               <li>B: নীরধি</li>
+               <li>C: বিটপী</li>
+               <li>D: অবনি</li>
+           </ul>
+           <input id="quiz5" type="text">
+           <br/><br/>
+           <button  onclick="sixth()">Next Quiz</button>
       </div>
-    </div>
+      
+      
+      
 
-    <!-- Countdown -->
-    <div id="countdown" class="countdown hidden"></div>
+      
+         <!--  Question six     -->
+       <div class="quiz">
+       <p> মাইকেল মধুসূদন দত্তের 'বীরাঙ্গনা কাব্য' কোন ধরনের কাব্য?</p>
+           <ul>
+               <li>A: মহাকাব্য</li>
+               <li>B: সনেট</li>
+               <li>C: গীতিকাব্য</li>
+               <li>D: পত্রকাব্য</li>
+           </ul>
+           <input id="quiz6" type="text">
+           <br/><br/>
+           <button  onclick="seventh()">Next Quiz</button>
+      </div>
+      
+      
+      
+         <!--  Question seven     -->
+       <div class="quiz">
+       <p> প্রথম কোন দেশে ইবোলা ভাইরাস শনাক্ত করা হয়?</p>
+           <ul>
+               <li>A: গণতান্ত্রিক কঙ্গো প্রজাতন্ত্র</li>
+               <li>B: সুদান ও গণতান্ত্রিক কঙ্গো প্রজাতন্ত্র</li>
+               <li>C: সুদান</li>
+               <li>D: সুইডেন</li>
+           </ul>
+           <input id="quiz7" type="text">
+           <br/><br/>
+           <button  onclick="eightth()">Next Quiz</button>
+      </div>
+      
+      
+ 
+      
+         <!--  Question eight     -->
+       <div class="quiz">
+       <p> বায়ুমন্ডলে নাইট্রোজেনের পরিমাণ কত?</p>
+           <ul>
+               <li>A: ৭৮.০২ ভাগ</li>
+               <li>B: ২৫ ভাগ</li>
+               <li>C: ২০ ভাগ</li>
+               <li>D: ৬৭.০২ ভাগ</li>
+           </ul>
+           <input id="quiz8" type="text">
+           <br/><br/>
+           <button  onclick="nineth()">Next Quiz</button>
+      </div>
+      
+      
+      
+      
+         <!--  Question nine     -->
+       <div class="quiz">
+       <p> মৌমাছির চাষ হলো___?</p>
+           <ul>
+               <li>A: এগ্রিকালচার</li>
+               <li>B: সেরিকালচার</li>
+               <li>C: পিসিকালচার</li>
+               <li>D: হর্টিকালচার</li>
+             	 <li>কোনটিই নয়</li>
+           </ul>
+           <input id="quiz9" type="text">
+           <br/><br/>
+           <button  onclick="tenth()">Next Quiz</button>
+      </div>
+      
+      
+     
 
-    <!-- Loader -->
-    <div id="loader" class="loader-container hidden">
-      <div class="loader"></div>
-    </div>
-
-    <!-- Quiz description -->
-    <div id="quiz-description"><div class="card text-center">
-        <div class="quiz-description__title">
-          <span id="quiz-label">JavaScript</span> Quiz
+        <!--  Question ten     -->
+       <div class="quiz">
+       <p>সমুদ্রবায়ু কখন প্রবল বেগে প্রবাহিত হয়?</p>
+           <ul>
+               <li>A: মধ্যাহ্নে</li>
+               <li>B: শেষরাতে</li>
+               <li>C: সবসময়</li>
+               <li>D: অপরাহ্নে</li>
+           </ul>
+           <input id="quiz10" type="text">
+           <br/><br/>
+           <button id="submit" onclick="mark()">Submit</button>
         </div>
-        <div><span id="quiz-count">5</span> questions</div>
-        <div>40 seconds per question</div>
-        <div>Are you ready?</div>
-      </div>
+        
 
-      <button id="startButton" class="submit">Start</button>
-    </div>
 
-    <!-- Quiz -->
-    <form id="quiz" class="hidden">
-      <div id="quiz-card" class="card">
-      </div>
-
-      <button type="submit" id="submitButton" class="submit">Submit</button>
-    </form>
-
-    <!-- Result -->
-    <div id="result-card" class="hidden">
-      <div class="card text-center">
-        <div class="quiz-result__title">Result</div>
-        <div id="result" class="quiz-result__title">3/5</div>
-        <div class="quiz-result__button-container">
-          <button id="view-answers" class="button-default">View correct answers</button>
+        
+        <!--   Results section     -->
+        <div id="results">
+            <p id="countPrint"></p>
+            <p id="confirm1"></p>
+            <p id="confirm2"></p>
+            <p id="confirm3"></p>
+            <p id="confirm4"></p>
+            <p id="confirm5"></p>
+        		 <p id="confirm6"></p> 	
+       		   <p id="confirm7"></p>
+      	    	<p id="confirm8"></p>   
+         			<p id="confirm9"></p>
+     		     <p id="confirm10"></p>
         </div>
-      </div>
+        <br/>
+        
 
-      <button class="submit restart">Restart</button>
-    </div>
 
-    <!-- Slides with answers -->
-    <div id="answers" class="hidden">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-        </div>
-      </div>
+    <!--By Mark Benjamin ... Sololearn -->
+     
+        <script> 
+         
+		
+			function all() {
+                var arr = document.getElementsByClassName("quiz");
+                for (i=0;i<arr.length;i++){
+                    arr[i].style.display = "none";
+                }
+                var submit = document.getElementById("submit");
+                submit.style.display = "none";
+                var results = document.getElementById("results");
+                results.style.display = "none";
+                var arr = document.getElementsByTagName("body");
+                arr[0].style.backgroundColor = "darkcyan";
+                
+            }
+            
+            function first() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[0].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "none";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
+            
+            
+            function second() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[0].style.display = "none";
+                arr[1].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "none";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
+            
+            
+            function third() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[1].style.display = "none";
+                arr[2].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "block";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
+            
+            function fourth() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[2].style.display = "none";
+                arr[3].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "block";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
+            
+            function fifth() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[3].style.display = "none";
+                arr[4].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "block";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
 
-      <button class="submit restart">Restart</button>
-    </div>
 
-    <!-- Navigation -->
-    <div id="navigation" class="overlay">
-      <div class="overlay__header">
-        <a href="#" class="menu-link overlay__header__link" data-menu="menu">&larr;</a>
-        <a href="#" id="closeMenuButton" class="overlay__header__link">&times;</a>
-      </div>
 
-      <!-- Menu -->
-      <div id="menu" class="overlay__content">
-        <a href="#" class="menu-link" data-menu="about">Author</a>
-        <a href="#" class="menu-link" data-menu="challenges">Quizzes</a>
-        <a href="https://github.com/makarsky/quiz-app" >Do you want to add a quiz?</a>
-      </div>
+							
+            function sixth() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[4].style.display = "none";
+                arr[5].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "block";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
 
-      <!-- About section -->
-      <div id="about" class="overlay__content">
-        <div>
-          <img src="https://api.sololearn.com/Uploads/Avatars/779917.jpg" alt="Avatar" class="img-circle"
-            style="width:80px">
-        </div>
-        <div>
-          <a href="https://www.sololearn.com/Profile/779917">Igor Makarsky</a>
-        </div>
-      </div>
+							
 
-      <!-- Challenges section -->
-      <div id="challenges" class="overlay__content">
-        <div id="quiz-categories"></div>
-      </div>
 
-    </div>
-  </div>
 
-  <script src="main.js"></script>
-</body>
+							function seventh() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[5].style.display = "none";
+                arr[6].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "block";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
 
+
+
+
+							function eightth() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[6].style.display = "none";
+                arr[7].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "block";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
+
+
+
+
+
+							function nineth() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[7].style.display = "none";
+                arr[8].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "block";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
+
+
+
+
+
+
+
+
+							function tenth() {
+                var arr = document.getElementsByClassName("quiz");
+                arr[8].style.display = "none";
+                arr[9].style.display = "block";
+                var submit = document.getElementById("submit");
+                submit.style.display = "block";
+                var initializer = document.getElementById("initializer");
+                initializer.style.display = "none";
+            }
+
+
+
+
+           
+            
+            
+            function mark(){
+                var quiz1=document.getElementById("quiz1").value;
+                var quiz2=document.getElementById("quiz2").value;
+                var quiz3=document.getElementById("quiz3").value;
+                var quiz4=document.getElementById("quiz4").value;
+                var quiz5=document.getElementById("quiz5").value;
+									var quiz6=document.getElementById("quiz6").value;
+									var quiz7=document.getElementById("quiz7").value;
+                var quiz8=document.getElementById("quiz8").value;
+									var quiz9=document.getElementById("quiz9").value;
+									var quiz10=document.getElementById("quiz10").value;
+
+
+                var confirm1 = document.getElementById("confirm1");
+                var confirm2 = document.getElementById("confirm2");
+                var confirm3 = document.getElementById("confirm3");
+                var confirm4 = document.getElementById("confirm4");
+                var confirm5 = document.getElementById("confirm5");
+									var confirm6 = document.getElementById("confirm6");
+									var confirm7 = document.getElementById("confirm7");
+									var confirm8 = document.getElementById("confirm8");
+									var confirm9 = document.getElementById("confirm9");
+									var confirm10 = document.getElementById("confirm10");
+
+
+
+                
+                var countPrint = document.getElementById("countPrint");
+
+
+                
+                var arr = document.getElementsByClassName("quiz");
+                arr[9].style.display = "none";
+                var submit = document.getElementById("submit");
+                submit.style.display = "none";
+                var results = document.getElementById("results");
+                results.style.display = "block";
+                var arr = document.getElementsByTagName("body");
+                arr[0].style.backgroundColor = "white";
+                arr[0].style.color = "darkcyan";
+
+
+                
+                var count = 0;
+                var quizNo = 10; //Number of quizzes
+                
+
+				// Question one
+                var answer = "B";
+                var alternative = "b";
+                var whichQuiz = "Quiz 1: ";
+
+                if (quiz1 == answer || quiz1 == alternative) {
+                    confirm1.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm1.innerHTML = whichQuiz + "Wrong";
+                }
+                
+
+				// Question two
+                var answer = "D";
+                var alternative = "d";
+                var whichQuiz = "Quiz 2: ";
+
+                if (quiz2 == answer || quiz2 == alternative) {
+                    confirm2.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm2.innerHTML = whichQuiz + "Wrong";
+                }
+
+
+                // Question three
+                var answer = "C";
+                var alternative = "c";
+                var whichQuiz = "Quiz 3: ";
+
+                if (quiz3 == answer || quiz3 == alternative) {
+                    confirm3.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm3.innerHTML = whichQuiz + "Wrong";
+                }
+                
+
+				// Question four
+                var answer = "A";
+                var alternative = "a";
+                var whichQuiz = "Quiz 4: ";
+
+                if (quiz4 == answer || quiz4 == alternative) {
+                    confirm4.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm4.innerHTML = whichQuiz + "Wrong";
+                }
+
+
+                // Question five
+                var answer = "C";
+                var alternative = "c";
+                var whichQuiz = "Quiz 5: ";
+
+                if (quiz5 == answer || quiz5 == alternative) {
+                    confirm5.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm5.innerHTML = whichQuiz + "Wrong";
+                }
+                
+
+
+								    // Question sixe
+                var answer = "D";
+                var alternative = "d";
+                var whichQuiz = "Quiz 6: ";
+
+                if (quiz6 == answer || quiz6 == alternative) {
+                    confirm6.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm6.innerHTML = whichQuiz + "Wrong";
+                }
+                
+
+
+									    // Question seven
+                var answer = "B";
+                var alternative = "b";
+                var whichQuiz = "Quiz 7: ";
+
+                if (quiz7 == answer || quiz7 == alternative) {
+                    confirm7.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm7.innerHTML = whichQuiz + "Wrong";
+                }
+                
+
+
+									    // Question eight
+                var answer = "A";
+                var alternative = "a";
+                var whichQuiz = "Quiz 8: ";
+
+                if (quiz8 == answer || quiz8 == alternative) {
+                    confirm8.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm8.innerHTML = whichQuiz + "Wrong";
+                }
+                
+
+
+
+
+
+								    // Question nine
+                var answer = "C";
+                var alternative = "c";
+                var whichQuiz = "Quiz 9: ";
+
+                if (quiz9 == answer || quiz9 == alternative) {
+                    confirm9.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm9.innerHTML = whichQuiz + "Wrong";
+                }
+                
+
+
+
+
+
+								    // Question ten
+                var answer = "D";
+                var alternative = "d";
+                var whichQuiz = "Quiz 10: ";
+
+                if (quiz10 == answer || quiz10 == alternative) {
+                    confirm10.innerHTML = whichQuiz + "Correct";
+                    count ++;
+                }
+                else {
+                    confirm10.innerHTML = whichQuiz + "Wrong";
+                }
+                
+
+
+
+
+
+
+
+
+
+
+                countPrint.innerHTML = "You got "+ count+ " of "+quizNo+" questions."
+                
+            }
+            
+            
+  
+
+
+        </script>
+        <!--By Mark Benjamin ... Sololearn -->
+
+    </body>
 </html>
